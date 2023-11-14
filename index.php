@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>MMS DOWNLOADER</title>
+    <title>MM's DOWNLOADER</title>
     <!-- Incluindo Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/modal.css">
@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-      <span class="navbar-brand">MMS Downloader</span>
+      <span class="navbar-brand">MM's Downloader</span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,10 +29,11 @@
         </ul>
       </div>
     </nav>
-
+    
     <div class="container-fluid mt-5">
       <div class="jumbotron text-center">
-        <h1 class="display-4">MMS Downloader</h1>
+        <img src="static/image/icon.ico" alt="" heigth="80px" width="80px" class="img-fluid d-inline-block">
+        <h1 class="display-4 d-inline-block align-middle">MM's Downloader</h1>
         <p class="lead color-red mt-5">Uma boa opção para compartilhar seus videos! :)</p>
       </div>
     </div>
