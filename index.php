@@ -18,7 +18,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-              <a class="nav-link text-dark" href="/">Home</a>
+            <button class="btn btn-primary m-2" onclick="openWindow()">Adicionar</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-secondary m-2">Editar</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-danger m-2">Remover</button>
           </li>
         </ul>
       </div>
@@ -26,16 +32,14 @@
 
     <div class="container-fluid mt-5">
       <div class="jumbotron text-center">
-        <h1 class="display-4">Olá, seja bem vindo(a) a pagina do administrador</h1>
-        <p class="lead color-red mt-5">Cuidado! As alterações podem causar danos a pagina inicial</p>
+        <h1 class="display-4">MMS Downloader</h1>
+        <p class="lead color-red mt-5">Uma boa opção para compartilhar seus videos! :)</p>
       </div>
     </div>
 
     <div class="container-fluid mt-5" style="text-align: center;">
       <h2 class="display-6">Videos</h2>
-      <button class="btn btn-outline-primary m-2" onclick="openWindow()">Adicionar</button>
-      <button class="btn btn-outline-secondary m-2">Editar</button>
-      <button class="btn btn-outline-danger m-2">Remover</button>
+      
     </div>
 
     <div id="myModal" class="modal">
