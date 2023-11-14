@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Admin Page</title>
+    <title>MMS DOWNLOADER</title>
     <!-- Incluindo Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/css/modal.css">
+    <link rel="stylesheet" href="static/css/modal.css">
+    <link rel="shortcut icon" href="static/image/icon.ico" type="image/x-icon">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
