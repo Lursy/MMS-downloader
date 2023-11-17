@@ -6,8 +6,8 @@
     <title>MM's DOWNLOADER</title>
     <!-- Incluindo Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/modal.css">
     <link rel="shortcut icon" href="static/image/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/modal.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
@@ -18,13 +18,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <button class="btn btn-primary m-2" onclick="openWindow()">Adicionar</button>
+            <button class="btn btn-primary m-2" onclick="openWindow('add')">Adicionar</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-secondary m-2">Editar</button>
+            <button class="btn btn-secondary m-2"  onclick="openWindow('edit')">Editar</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-danger m-2">Remover</button>
+            <button class="btn btn-danger m-2"  onclick="openWindow('remove')">Remover</button>
           </li>
         </ul>
       </div>
@@ -32,42 +32,38 @@
     
     <div class="container-fluid mt-5">
       <div class="jumbotron text-center">
-        <img src="static/image/icon.ico" alt="" heigth="80px" width="80px" class="img-fluid d-inline-block">
-        <h1 class="display-4 d-inline-block align-middle">MM's Downloader</h1>
-        <p class="lead color-red mt-5">Uma boa opção para compartilhar seus videos! :)</p>
+        <div style="user-select: none;">
+          <img src="static/image/icon.ico" alt="" heigth="80px" width="80px" class="img-fluid d-inline-block">
+          <h1 class="display-4 d-inline-block align-middle">MM's Downloader</h1>
+        </div>
+        <p class="lead color-red mt-5">Uma boa opção para compartilhar seus videos!</p>
+        <?php include("core/upload.php")?>
       </div>
     </div>
 
     <div class="container-fluid mt-5" style="text-align: center;">
       <h2 class="display-6">Videos</h2>
-      
     </div>
 
     <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeWindow()">&times;</span>
-            <p>Conteúdo da janela aqui...</p>
+      <div class="modal-content father">
+        <span class="close" onclick="closeWindow()">&times;</span>
+        <div class="center sun">
+          <div id="add" style="display: none;">
+            <?php include('page/add.html');?>
+          </div>
+          <div id="edit" style="display: none;">
+            <?php include('page/edit.html'); ?>
+          </div>
+          <div id="remove" style="display: none;">
+            <?php include('page/remove.html'); ?>
+          </div>
         </div>
+      </div>
     </div>
 
-    <script>
-      function openWindow() {
-        document.getElementById('myModal').style.display = 'block';
-      }
-
-      function closeWindow() {
-        document.getElementById('myModal').style.display = 'none';
-      }
-
-      window.onclick = function (event) {
-        var modal = document.getElementById('myModal');
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-      };
-    </script>
-
     <!-- Incluindo jQuery e Bootstrap JS -->
+    <script src="static/js/modal.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

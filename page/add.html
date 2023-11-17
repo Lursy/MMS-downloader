@@ -1,0 +1,39 @@
+<head>
+    <link rel="stylesheet" href="static/css/form.css">
+</head>
+<div style="display: block;" id="formContainer">
+    <form method="POST" enctype="multipart/form-data">
+        <div class="file_input" id="form">
+            <input type="file" multiple accept="video/*"  id="file" name="file">
+        </div>
+        <span class="filein" id="upload">Upload</span>
+        <img src="../static/image/mp4.png" alt="file_mp4" id="png_mp4" class="fileout" style="display: none;" width="80px" height="80px">
+        <div class="form-group row">
+            <label for="title" class="col-sm-1 col-form-label">Título</label>
+            <div class="col-sm-11">
+                <input type="text" name="title" id="title" class="mt-1 mb-2 form-control" maxlength="50">
+            </div>
+        </div>
+        <button type="submit" class="form_button">Enviar</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById("file").addEventListener('change', () => {
+        var fileInput = this;
+        console.log(fileInput);
+        var text = document.getElementById("upload");
+        var png = document.getElementById("png_mp4");
+        var formContent = document.getElementById("form");
+        if(fileInput.File.length > 0){
+            text.style.display = 'none';
+            png.style.display = 'block';
+            formContent.classList.add('receiv');
+        }else{
+            formContent.classList.remove('receiv');
+            png.style.display = 'none';
+            text.style.display = 'block';
+        }
+        
+    })
+</script>
