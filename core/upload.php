@@ -1,6 +1,7 @@
 <p>
 <?php
 require_once "base/connect.php";
+require "core/bd.php";
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -12,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Obtém o nome do arquivo e o caminho temporário
         $name = explode(".", basename($_FILES['file']['name']));
-        
-        $sql = "INSERT INTO video (title) VALUES ('" . $_POST["title"] . "')";
-        
+    
+
+        $db = new Database();
+        $sql = "INSERT INTO video (title) VALUES (?);";
         $conexao = novaConexao();
-        $resultado = $conexao->query($sql);
-        
+        $resultado = $db->query($sql, $_POST["title"], "s", $conexao)[1];
         if ($resultado) {
             $ID = $conexao->insert_id;
             $fileName = $ID . "." . end($name);
@@ -30,9 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Desculpe, houve um problema ao enviar o arquivo.";
             }
         }else{
-            echo "Erro ao inserir o registro: " . $mysqli->error;
+            echo "Erro ao inserir o registro: " . $resultado . "~";
         }
-        
         $conexao->close();
     } else {
         echo "Erro: " . $_FILES["file"]["error"];

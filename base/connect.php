@@ -13,6 +13,8 @@ function novaConexao($banco = 'MMS_DOWNLOADER'){
         die('Erro:' . $conexao->connect_error);
     }
 
+    $conexao->set_charset("utf8");
+
     return $conexao;
 }
 
