@@ -7,6 +7,7 @@
     <!-- Incluindo Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="shortcut icon" href="static/image/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/video.css">
     <link rel="stylesheet" href="static/css/modal.css">
   </head>
   <body>
@@ -44,7 +45,12 @@
     <div class="container-fluid mt-5" style="text-align: center;">
       <h2 class="display-6">Videos</h2>
     </div>
-    <?php include("core/load.php")?>
+    <div class="d-flex justify-content-center">
+      <div class="container_video">
+        <?php include("core/load.php")?>
+      </div>
+    </div>
+    
 
     <div id="myModal" class="modal">
       <div class="modal-content father">
@@ -58,6 +64,9 @@
           </div>
           <div id="remove" style="display: none;">
             <?php include('page/remove.html'); ?>
+          </div>
+          <div id="video" style="display: none;">
+            <?php include('page/video.php'); ?>
           </div>
         </div>
       </div>

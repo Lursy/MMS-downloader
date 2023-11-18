@@ -18,8 +18,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $db = new Database();
         $sql = "INSERT INTO video (title) VALUES (?);";
         $conexao = novaConexao();
-        $resultado = $db->query($sql, $_POST["title"], "s", $conexao)[1];
-        if ($resultado) {
+        $resultado = $db->query($sql, $_POST["title"], "s", $conexao);
+        $load = $resultado[1];
+        $result = $resultado[0];
+        if ($load) {
             $ID = $conexao->insert_id;
             $fileName = $ID . "." . end($name);
             $targetPath = $uploadDir . $fileName;
