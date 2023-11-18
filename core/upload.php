@@ -1,5 +1,7 @@
 <p>
 <?php
+require_once "base/connect.php";
+
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -10,15 +12,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Obtém o nome do arquivo e o caminho temporário
         $name = explode(".", basename($_FILES['file']['name']));
-        $fileName = $_POST["title"] . "." . end($name);
-        $targetPath = $uploadDir . $fileName;
-
-        // Move o arquivo do diretório temporário para o destino final
-        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetPath)) {
-            echo "O arquivo foi enviado com sucesso.";
-        } else {
-            echo "Desculpe, houve um problema ao enviar o arquivo.";
+        
+        $sql = "INSERT INTO video (title) VALUES ('" . $_POST["title"] . "')";
+        
+        $conexao = novaConexao();
+        $resultado = $conexao->query($sql);
+        
+        if ($resultado) {
+            $ID = $conexao->insert_id;
+            $fileName = $ID . "." . end($name);
+            $targetPath = $uploadDir . $fileName;
+    
+            // Move o arquivo do diretório temporário para o destino final
+            if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetPath)) {
+                echo "O arquivo foi enviado com sucesso.";
+            } else {
+                echo "Desculpe, houve um problema ao enviar o arquivo.";
+            }
+        }else{
+            echo "Erro ao inserir o registro: " . $mysqli->error;
         }
+        
+        $conexao->close();
     } else {
         echo "Erro: " . $_FILES["file"]["error"];
     }

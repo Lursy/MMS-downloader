@@ -44,6 +44,7 @@
     <div class="container-fluid mt-5" style="text-align: center;">
       <h2 class="display-6">Videos</h2>
     </div>
+    <?php include("core/load.php")?>
 
     <div id="myModal" class="modal">
       <div class="modal-content father">
