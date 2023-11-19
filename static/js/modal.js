@@ -5,7 +5,7 @@ function openWindow(page, file=null) {
     window.page = document.getElementById(page)
     window.page.style.display = 'block'
     if(file){
-        source = document.getElementById("source");
+        window.source = document.getElementById("source");
         source.src = `../video/${file}`;
     }
 }
@@ -13,6 +13,7 @@ function openWindow(page, file=null) {
 function closeWindow() {
     document.getElementById('myModal').style.display = 'none';
     window.page.style.display = 'none'
+    window.source.pause();
 }
 
 window.onclick = function (event) {

@@ -22,8 +22,8 @@ foreach($arquivos as $file): ?>
         $conexao->close();
     ?>
     
-    <div class="box d-inline-block videos">
-        <video width="300" height="220" onclick="openWindow('video', file='<?=$file?>')">
+    <div class="box d-inline-block videos" onclick="openWindow('video', file='<?=$file?>')">
+        <video width="300" height="220">
             <source src="../video/<?=$file?>">
         </video>
         <p><?=$title?></p>

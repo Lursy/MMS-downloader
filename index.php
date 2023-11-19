@@ -34,7 +34,7 @@
     <div class="container-fluid mt-5">
       <div class="jumbotron text-center">
         <div style="user-select: none;">
-          <img src="static/image/icon.ico" alt="" heigth="80px" width="80px" class="img-fluid d-inline-block">
+          <img src="static/image/icon.ico" heigth="80px" width="80px" class="img-fluid d-inline-block gif">
           <h1 class="display-4 d-inline-block align-middle">MM's Downloader</h1>
         </div>
         <p class="lead color-red mt-5">Uma boa opção para compartilhar seus videos!</p>
