@@ -12,7 +12,9 @@
 .videoshome{
     width: auto;
     max-width: 300px;
-    min-width: 100px;
+    max-height: 220px;
+    min-height: 200px;
+    min-width: 110px;
     padding: 10px;
 }
 .videos:hover{
