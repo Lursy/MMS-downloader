@@ -23,7 +23,7 @@ foreach($arquivos as $file): ?>
     ?>
     
     <div class="box d-inline-block videos" onclick="openWindow('video', file='<?=$file?>')">
-        <video width="300" height="220">
+        <video width="300" height="220" class="videoshome">
             <source src="../video/<?=$file?>">
         </video>
         <p><?=$title?></p>

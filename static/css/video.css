@@ -9,6 +9,12 @@
     transition: 1s;
     cursor: pointer;
 }
+.videoshome{
+    width: auto;
+    max-width: 300px;
+    min-width: 100px;
+    padding: 10px;
+}
 .videos:hover{
     background-color: rgb(0, 255, 0, 0.5);
 }

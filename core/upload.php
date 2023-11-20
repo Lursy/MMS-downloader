@@ -28,9 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
             // Move o arquivo do diretório temporário para o destino final
             if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetPath)) {
-                echo "O arquivo foi enviado com sucesso.";
-            } else {
-                echo "Desculpe, houve um problema ao enviar o arquivo.";
+                header("Location: /");
+                exit();
             }
         }else{
             echo "Erro ao inserir o registro: " . $resultado . "~";
