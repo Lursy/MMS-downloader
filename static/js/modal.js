@@ -1,7 +1,7 @@
 window.page = null;
 
 function openWindow(page, file=null) {
-    document.getElementById('myModal').style.display = 'table';
+    document.getElementById('myModal').style.display = 'flex';
     window.page = document.getElementById(page)
     window.page.style.display = 'block'
     if(file){

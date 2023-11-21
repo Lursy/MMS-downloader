@@ -9,6 +9,10 @@
     transition: 1s;
     cursor: pointer;
 }
+#source{
+    width: auto;
+    max-width: 420px;
+}
 .videoshome{
     width: auto;
     max-width: 300px;

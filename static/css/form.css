@@ -1,5 +1,6 @@
 form{
     position: relative;
+    text-align: center;
 }
 
 .file_input{
@@ -15,12 +16,15 @@ form{
     opacity: 0;
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 75vw;
+    max-width: 510px;
     height: 200px;
     z-index: 2;
     cursor: pointer;
 }
-
+#title{
+    max-width: 510px;
+}
 
 
 .receiv{
@@ -46,7 +50,8 @@ form{
     color: #fff;
     background: #16a085;
     border: none;
-    width: 508px;
+    width: 75vw;
+    max-width: 510px;
     height: 35px;
     margin-top: -20px;
     margin-left: -4px;

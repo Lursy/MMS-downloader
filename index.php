@@ -7,23 +7,9 @@
     <!-- Incluindo Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="shortcut icon" href="static/image/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="static/css/video.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/modal.css">
-    <style>
-      body::-webkit-scrollbar {
-        width: 5px;               /* width of the entire scrollbar */
-      }
-
-      body::-webkit-scrollbar-track {
-        background: white;        /* color of the tracking area */
-      }
-
-      body::-webkit-scrollbar-thumb {
-        background-color: #AAA;    /* color of the scroll thumb */
-        border-radius: 5px;       /* roundness of the scroll thumb */
-        border: none;  /* creates padding around scroll thumb */
-      }
-    </style>
+    <link rel="stylesheet" href="static/css/video.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
@@ -67,7 +53,7 @@
     </div>
     
 
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal justify-content-center align-items-center">
       <div class="modal-content father">
         <span class="close" onclick="closeWindow()">&times;</span>
         <div class="center sun">

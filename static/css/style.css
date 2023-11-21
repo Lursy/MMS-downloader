@@ -1,0 +1,29 @@
+.close{
+    display: inline;
+    background-color: #AFA;
+    width: 20px;
+    padding: 2px;
+    height: 28px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    background-color: #2A2;
+    text-decoration: none;
+    cursor: pointer;
+}
+body::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #AAA;    
+    border-radius: 5px;
+    border: none;
+}
