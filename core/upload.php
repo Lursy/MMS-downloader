@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifica se o arquivo foi enviado sem erros
     if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0) {
         // Define o diretório de destino para o upload
-        $uploadDir = "video/";
 
         // Obtém o nome do arquivo e o caminho temporário
         $name = explode(".", basename($_FILES['file']['name']));
@@ -24,12 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($load) {
             $ID = $conexao->insert_id;
             $fileName = $ID . "." . end($name);
-            $targetPath = $uploadDir . $fileName;
-    
+            $targetPath = "video/" . $fileName;
             // Move o arquivo do diretório temporário para o destino final
             if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetPath)) {
-                header("Location: /");
-                exit();
+                try{
+                    header("Location: /");
+                    exit();
+                }catch(Exception $e){
+                    echo $e;
+                }
             }
         }else{
             echo "Erro ao inserir o registro: " . $resultado . "~";
