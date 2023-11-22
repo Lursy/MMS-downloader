@@ -35,11 +35,11 @@
     <div class="container-fluid mt-5">
       <div class="jumbotron text-center">
         <div style="user-select: none;">
-          <img src="static/image/icon.ico" heigth="80px" width="80px" class="img-fluid d-inline-block gif">
+          <img src="static/image/icon.ico" heigth="80px" width="80px" class="img-fluid d-inline-block">
           <h1 class="display-4 d-inline-block align-middle">MM's Downloader</h1>
         </div>
         <p class="lead color-red mt-5">Uma boa opção para compartilhar seus videos!</p>
-        <?php include("core/upload.php")?>
+        <?php include("core/post.php")?>
       </div>
     </div>
 
@@ -61,13 +61,13 @@
             <?php include('page/add.html');?>
           </div>
           <div id="edit" style="display: none;">
-            <?php include('page/edit.html'); ?>
+            <?php include('page/edit.php'); ?>
           </div>
           <div id="remove" style="display: none;">
             <?php include('page/remove.html'); ?>
           </div>
           <div id="video" style="display: none;">
-            <?php include('page/video.php'); ?>
+            <?php include('page/video.html'); ?>
           </div>
         </div>
       </div>

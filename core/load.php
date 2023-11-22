@@ -7,8 +7,7 @@
     $db = new Database();
 ?>
 
-<?php
-foreach($arquivos as $file): ?>
+<?php foreach($arquivos as $file): ?>
     <?php
         $id = explode(".", $file)[0];
         $sql = "SELECT * FROM video WHERE id=?";
@@ -23,10 +22,8 @@ foreach($arquivos as $file): ?>
     ?>
     
     <div class="box d-inline-block videos" onclick="openWindow('video', file='<?=$file?>')">
-        <video class="videoshome">
-            <source src="../video/<?=$file?>">
-        </video>
+        <img src="../thumbnail/<?=$id?>.jpg" alt="" class="thumbnail">
         <p><?=$title?></p>
     </div>
 
-    <?php endforeach ?>
+<?php endforeach ?>

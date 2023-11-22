@@ -99,3 +99,28 @@ form button:active{
 #formContainer{
     height: auto;
 }
+
+.title-edit{
+    width: 60%;
+}
+
+.btn-edit{
+    width: 20%;
+    height: 45px;
+    padding: inherit;
+}
+
+.container-edit{
+    width: 70vw;
+    max-width: 500px;
+    background-color: #aaffaa7d;
+    padding: 16px;
+    border-radius: 0px 15px 15px;
+}
+
+.id-edit{
+    position: relative;
+    width: 10%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
