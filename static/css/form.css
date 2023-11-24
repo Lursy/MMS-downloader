@@ -69,11 +69,11 @@ form button:active{
 }
 
 .file_input:hover~.filein{
-    background-image: url("/static/image/title.gif");
+    background-image: url("/static/image/upload.gif");
 }
 .filein{
     position: absolute;
-    background-image: url("/static/image/title.png");
+    background-image: url("/static/image/upload.png");
     background-repeat: no-repeat;
     background-size: cover;
     pointer-events: none;
