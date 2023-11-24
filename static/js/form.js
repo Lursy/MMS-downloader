@@ -13,21 +13,21 @@ file.addEventListener('change', () => {
 
 file.addEventListener('drop', (event) => {
     event.preventDefault();
-    var fileInput = event;
+    var fileInput = document.getElementById("file");
     var formContent = document.getElementById("form");
 
     const files = event.dataTransfer.files;
     var png = document.getElementById("upload");
 
     if (files.length > 0) {
-        file.value = '';
         const fileType = files[0].type;
         if (fileType.startsWith('video/')) {
             fileInput.files = files;
+            console.log(files);
             formContent.classList.add('receiv');
             png.style.backgroundImage = 'url(static/image/mp4.png)';
         }else{
-            file.value = '';
+            fileInput.value = '';
             formContent.classList.remove('receiv');
             png.style.backgroundImage = 'url(static/image/file_error.png)';
         }

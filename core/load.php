@@ -23,7 +23,7 @@
     
     <div class="box d-inline-block videos" onclick="openWindow('video', file='<?=$file?>')">
         <img src="../thumbnail/<?=$id?>.jpg" alt="" class="thumbnail">
-        <p><?=$title?></p>
+        <p><?=htmlspecialchars($title, ENT_QUOTES, 'UTF-8')?></p>
     </div>
 
 <?php endforeach ?>
