@@ -14,6 +14,7 @@
                     <input type="text" name="new_title" id="title" class="mt-1 form-control" maxlength="50" value="<?=htmlspecialchars($all_data["title"], ENT_QUOTES, 'UTF-8');?>" required>
                 </div>
                 <input type="submit" value="salvar" class="btn btn-outline-primary btn-edit">
+                <input type="hidden">
             </div>
         </form>
     <?php endwhile;?>

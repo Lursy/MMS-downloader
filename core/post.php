@@ -20,7 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $id = $_POST['id'];
         if($load){
             unlink("thumbnail/$id.jpg");
-            unlink("video/$id.mp4");
+            $video = glob("video/$id.*");
+            unlink($video[0]);
         }
     }else{
         if (isset($_FILES["file"]) && $_FILES["file"]["error"] == 0) {
