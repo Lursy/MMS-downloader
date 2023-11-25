@@ -64,7 +64,7 @@
             <?php include('page/edit.php'); ?>
           </div>
           <div id="remove" style="display: none;">
-            <?php include('page/remove.html'); ?>
+            <?php include('page/remove.php'); ?>
           </div>
           <div id="video" style="display: none;">
             <?php include('page/video.html'); ?>

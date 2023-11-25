@@ -2,8 +2,8 @@
     require_once "base/connect.php";
 
     $itens = scandir("video/");
-    // Filtra apenas os arquivos (remove "." e "..")
-    $arquivos = array_diff($itens, array('.', '..'));
+    // Filtra apenas os arquivos (remove ".", ".." e "0")
+    $arquivos = array_diff($itens, array('.', '..', "0"));
     $db = new Database();
 ?>
 
@@ -12,7 +12,7 @@
         $id = explode(".", $file)[0];
         $sql = "SELECT * FROM video WHERE id=?";
         $conexao = novaConexao();
-        $result = $db->query($sql, $id, "i", $conexao)[0];
+        $result = $db->query($sql, $conexao, $id, "i")[0];
         if ($result->num_rows > 0) {
             // Loop pelos resultados
             $row = $result->fetch_assoc();

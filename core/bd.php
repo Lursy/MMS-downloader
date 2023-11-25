@@ -3,7 +3,7 @@ require_once "base/connect.php";
 
 
 class Database{
-    public function query($sql, $param=null, $type="s", $conn){
+    public function query($sql, $conn, $param=null, $type="s"){
 
         $stmt = $conn->prepare($sql);
         if ($param){
