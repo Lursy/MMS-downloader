@@ -2,6 +2,9 @@
 <?php
 require_once "base/connect.php";
 require "core/bd.php";
+ini_set('upload_max_filesize', '500M');
+ini_set('post_max_size', '500M');
+ini_set('max_execution_time', 300);
 
 $conexao = novaConexao();
 $db = new Database();
@@ -41,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // Caminho para onde você deseja salvar a miniatura
                     $thumbnailPath = 'thumbnail/' . $ID . '.jpg';
                     file_put_contents($thumbnailPath, '');    
-    
+                    
                     exec("ffmpeg -i $videoPath -ss 00:00:01.000 -vframes 1 $thumbnailPath -y");
                 }
             }else{

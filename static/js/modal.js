@@ -22,4 +22,4 @@ window.onclick = function (event) {
         modal.style.display = 'none';
         window.page.style.display = 'none'
     }
-};
+}

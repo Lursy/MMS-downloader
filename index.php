@@ -55,7 +55,7 @@
 
     <div id="myModal" class="modal justify-content-center align-items-center">
       <div class="modal-content father">
-        <span class="close" onclick="closeWindow()">&times;</span>
+        <span class="close" id="cancel-button" onclick="closeWindow()">&times;</span>
         <div class="center sun">
           <div id="add" style="display: none;">
             <?php include('page/add.html');?>

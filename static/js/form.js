@@ -65,12 +65,26 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
         }
     };
 
-    // Lidar com erros de rede
-    xhr.onerror = function() {
-        console.error('Erro de rede durante o upload.');
-    };
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                // O upload foi bem-sucedido, redirecionar ou fazer algo aqui
+                window.location.href = '/';
+            } else {
+                // Ocorreu um erro durante o upload
+                console.error('Erro durante o upload:', xhr.statusText);
+            }
+        }
+    }
+
 
     // Enviar a solicitação AJAX
     xhr.open('POST', 'index.php', true);
     xhr.send(formData);
+});
+
+var cancelButton = document.getElementById('cancel-button');
+
+cancelButton.addEventListener('click', function() {
+    xhr.abort();
 });
