@@ -23,8 +23,8 @@
           Aqui estão os principais arquivos back-end do site.<br>
           <ul>
             <li><i>bd.php</i>: Aqui é criada a classe <code>Database</code> usada para evitar sql injection nas querys</li>
-            <li><i>load.php</i>: Este arquivo é responsavel por exibir os videos presentes no banco<br> de dados na tela inicial</li>
-            <li><i>post.php</i>: Este arquivo é responsavel por controlar todas as requisições POST<br> sendo elas upload, edit e remove</li>
+            <li><i>load.php</i>: Este arquivo é responsavel por exibir os videos presentes no banco de dados na tela inicial</li>
+            <li><i>post.php</i>: Este arquivo é responsavel por controlar todas as requisições POST sendo elas upload, edit e remove</li>
           </ul>
         </td>
       </tr>
