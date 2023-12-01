@@ -3,8 +3,8 @@
 </div>
 <h2>Construção</h2>
 
+<img src="/readme_fotos/construcao.png">
 <table>
-  <td><img src="/readme_fotos/construcao.png"></td>
   <td>
     <table>
       <tr>
