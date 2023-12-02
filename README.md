@@ -7,7 +7,7 @@
   <img src="/readme_fotos/construcao.png">
   <table>
       <tr>
-        <td><strong>Base</strong></td>
+        <td><a href="#base"><strong>Base</strong></a></td>
         <td>
           Aqui estão todos os arquivos relacionados ao banco de dado.<br>
           <ul>
@@ -18,7 +18,7 @@
         </td>
       </tr>
       <tr>
-        <td><strong>Core</strong></td>
+        <td><a href="#core"><strong>Core</strong></a></td>
         <td>
           Aqui estão os principais arquivos back-end do site.<br>
           <ul>
@@ -29,7 +29,7 @@
         </td>
       </tr>
       <tr>
-        <td><strong>Page</strong></td>
+        <td><a href="#page"><strong>Page</strong></a></td>
         <td>
           Aqui estão as paginas carredas no modal.
           <ul>
@@ -41,7 +41,7 @@
         </td>
       </tr>
       <tr>
-        <td>Static</td>
+        <td><a href="#Static"><strong>Static</strong></a></td>
         <td>
           Aqui estão os arquivos estáticos do site
           <ul>
@@ -52,12 +52,16 @@
         </td>
       </tr>
       <tr>
-        <td>Thumbnail</td>
+        <td><strong>Thumbnail</strong></td>
         <td>Está é a pasta onde ficam armazenadas as thumbnails dos videos upados</td>
       </tr>
       <tr>
-        <td>Video</td>
+        <td><strong>Video</strong></td>
         <td>Está é a pasta onde ficam armazenadas os videos upados</td>
       </tr>
   </table>
+</div>
+
+<div>
+  <h2 id="base">Base</h2>
 </div>
