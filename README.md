@@ -11,9 +11,9 @@
         <td>
           Aqui estão todos os arquivos relacionados ao banco de dado.<br>
           <ul>
-            <li><i>connect.php</i>: Usada para conectar-se ao banco de dados</li>
-            <li><i>database.php</i>: Este arquivo cria o banco de dados</li>
-            <li><i>table.php</i>: Este arquivo cria a tabela de videos</li>
+            <li><a href="#connect.php"><i>connect.php</i></a>: Usada para conectar-se ao banco de dados</li>
+            <li><a href="#database.php"><i>database.php</i></a>: Este arquivo cria o banco de dados</li>
+            <li><a href="#table.php"><i>table.php</i></a>: Este arquivo cria a tabela de videos</li>
           </ul>
         </td>
       </tr>
@@ -41,7 +41,7 @@
         </td>
       </tr>
       <tr>
-        <td><a href="#Static"><strong>Static</strong></a></td>
+        <td><a href="#static"><strong>Static</strong></a></td>
         <td>
           Aqui estão os arquivos estáticos do site
           <ul>
@@ -61,7 +61,102 @@
       </tr>
   </table>
 </div>
-
+<br>
+<br>
 <div>
   <h2 id="base">Base</h2>
+  <h3 id="connect.php">connect.php:</h3>
+  <p>
+    Arquivo usado para iniciar a conexão com o banco de dados.<br>
+    Esta criada uma função <code>NovaConexao()</code> que é usada nos demais arquivos que usam mySQLi
+  </p>
+  <details>
+    <summary>Código</summary>
+
+```php
+<?php
+  function novaConexao($banco = '<NAME>'){
+      $servidor = '<localhost>:<PORT>';
+      $usuario = '<ROOT>';
+      $senha = '<PASSWORD>';
+  
+      $conexao = new mysqli($servidor, $usuario, $senha, $banco);
+  
+      if($conexao->connect_error){
+          die('Erro:' . $conexao->connect_error);
+      }
+  
+      $conexao->set_charset("utf8");
+      return $conexao;
+  }
+?>
+```
+    
+  </details>
+
+  <br>
+
+  <h3 id="database.php">database.php:</h3>
+  <p>
+    Pagina que cria o banco de dados.<br>
+    É usado inicialmente para que o site possa funcionar corretamente.
+  </p>
+  <details>
+    <summary>Código</summary>
+
+```php
+<?php
+    require_once "connect.php";
+
+    $conexao = novaConexao(null);
+
+    $sql = 'CREATE DATABASE IF NOT EXISTS <NOME_BANCO>';
+
+    $resultado = $conexao->query($sql);
+
+    if($resultado){
+        echo "Sucesso :)";
+    }else{
+        echo "Erro: " . $conexao->error;
+    }
+
+    $conexao->close();
+?>
+```
+    
+  </details>
+
+  <br>
+
+  <h3 id="table.php">table.php:</h3>
+  <p>
+    Pagina que cria a tabela de videos no banco de dados.<br>
+    É usado inicialmente para que o site possa funcionar corretamente.
+  </p>
+  <details>
+    <summary>Código</summary>
+
+```php
+<?php
+    require_once "connect.php";
+
+    $sql = "CREATE TABLE IF NOT EXISTS video (
+        id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(50) NOT NULL
+    )";
+
+    $conexao = novaConexao();
+    $resultado = $conexao->query($sql);
+
+    if($resultado){
+        echo "Sucesso :)";
+    }else {
+        echo "Erro: " . $conexao->error;
+    }
+
+    $conexao->close();
+?>
+```
+    
+  </details>
 </div>
