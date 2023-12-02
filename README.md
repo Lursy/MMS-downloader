@@ -4,7 +4,6 @@
 <h2>Construção</h2>
 
 <div align="center">
-  <img src="/readme_fotos/construcao.png">
   <table>
       <tr>
         <td><a href="#base"><strong>Base</strong></a></td>
